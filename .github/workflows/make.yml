@@ -26,7 +26,7 @@ jobs:
           ls -l
           ls -l sjcl
           cd sjcl
-          ./configure --compress --without-all --with-aes --with-sha256
+          ./configure --compress=closure --without-all --with-aes --with-sha256
           make
           ls -l
       - name: Archive production artifacts
