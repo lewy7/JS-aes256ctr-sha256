@@ -29,10 +29,11 @@ jobs:
           ./configure --compress=closure --without-all --with-aes --with-sha256
           make
           ls -l
+          cat sjcl.js
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: let.vietins.top.ssl
+          name: sjcl.js
           path: |
             sjcl/sjcl.js
             retention-days: 90
