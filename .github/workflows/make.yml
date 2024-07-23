@@ -25,3 +25,14 @@ jobs:
           git clone https://github.com/bitwiseshiftleft/sjcl.git
           ls -l
           ls -l sjcl
+          cd sjcl
+          ./configure --compress --without-all --with-aes --with-sha256
+          make
+          ls -l
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: let.vietins.top.ssl
+          path: |
+            sjcl/sjcl.js
+            retention-days: 90
