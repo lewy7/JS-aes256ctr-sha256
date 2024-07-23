@@ -26,12 +26,12 @@ jobs:
           ls -l
           ls -l sjcl
           cd sjcl
-          ./configure --compress=closure --without-all --with-aes --with-sha256
+          ./configure --compress=closure --without-all --with-bitArray --with-codecString --with-codecHex
           make
           ls -l
           cat sjcl.js
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: sjcl.js
           path: |
