@@ -26,7 +26,7 @@ jobs:
           ls -l
           ls -l sjcl
           cd sjcl
-          ./configure --compress=closure --without-all --with-bitArray --with-codecString --with-codecHex --with-aes --whith-cbc --with-sha256
+          ./configure --compress=closure --without-all --with-bitArray --with-codecString --with-codecHex --with-aes --with-cbc --with-sha256
           make
           ls -l
           cat sjcl.js
